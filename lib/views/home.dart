@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notes/views/widgets/dialog.dart';
 
 import 'package:notes/views/widgets/listview_note.dart';
 
@@ -19,7 +20,14 @@ class HomePage extends StatelessWidget {
       ),
       body: const ListViewNote(),
       floatingActionButton:
-          FloatingActionButton(onPressed: () {}, child: const Icon(Icons.add,color: Colors.redAccent,)),
+          FloatingActionButton(onPressed: () {
+           showDialog(
+            context: context,
+            builder: (BuildContext context) {
+              return AddNoteDialog();
+            },
+          );
+          }, child: const Icon(Icons.add,color: Colors.redAccent,)),
     );
   }
 }
