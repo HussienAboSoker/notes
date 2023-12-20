@@ -6,36 +6,38 @@ class AddNoteDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AlertDialog(
-      title: const Text('Add a New Note'),
-      content: Column(
-        mainAxisSize: MainAxisSize.max,
-        children: [
-          const TextField(
-            
-            decoration: InputDecoration(
-              labelText: 'title',
+    return Dialog(
+      child: Padding(
+        padding: const EdgeInsets.all(23),
+        child: Column(
+          children: [
+            const TextField(
+              decoration: InputDecoration(
+                labelText: 'title',
+                border: OutlineInputBorder(),
+              ),
+              maxLines: 3,
             ),
-            maxLines: 3,
-          ),
-          const SizedBox(
-            height: 20,
-          ),
-          const TextField(
-            decoration: InputDecoration(
-              labelText: 'subtitle',
+            const SizedBox(
+              height: 20,
             ),
-            maxLines: 3,
-          ),
-          const SizedBox(height: 16),
-          ElevatedButton(
-            onPressed: () {
-              // Add your logic to save the note
-              Navigator.pop(context); // Close the dialog
-            },
-            child: const Text('Add Note'),
-          ),
-        ],
+            const TextField(
+              decoration: InputDecoration(
+                labelText: 'subtitle',
+                border: OutlineInputBorder(),
+              ),
+              maxLines: 3,
+            ),
+            const SizedBox(height: 16),
+            ElevatedButton(
+              onPressed: () {
+                // Add your logic to save the note
+                Navigator.pop(context); // Close the dialog
+              },
+              child: const Text('Add Note'),
+            ),
+          ],
+        ),
       ),
     );
   }

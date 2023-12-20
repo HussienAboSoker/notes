@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
             color: Colors.white.withOpacity(.5),
           ),
         ),
-        brightness: Brightness.dark,
+        brightness: Brightness.light,
       ),
       home: const HomePage(),
     );
