@@ -17,7 +17,9 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-      body:const ListViewNote(),
+      body: const ListViewNote(),
+      floatingActionButton:
+          FloatingActionButton(onPressed: () {}, child: const Icon(Icons.add,color: Colors.redAccent,)),
     );
   }
 }
